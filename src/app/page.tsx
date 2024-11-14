@@ -1,101 +1,147 @@
-import Image from "next/image";
+import { BsFacebook, BsGitlab, BsLinkedin } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { TbBrightnessDownFilled } from "react-icons/tb";
+import BtnGroup from "./components";
+import BtnIcon from "./components/btn-icon";
+import LinkIcon from "./components/link-icon";
+import SectionLink from "./components/link-section";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <section className="container grid grid-cols-2 mx-auto min-h-screen px-24">
+      <div className="py-24 flex flex-col justify-between sticky top-0 left-0 h-screen max-h-screen">
+        <div>
+          <h1 className="text-7xl font-semibold tracking-tight text-slate-200 italic">
+            Do Tuan Nghia
+          </h1>
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-200">
+            Coder
+          </h2>
+          <p className="mt-4 text-slate-500">
+            I can build everything you can imagine
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="flex flex-row gap-4 mt-4">
+            <LinkIcon href="" icon={BsFacebook} />
+            <LinkIcon href="" icon={BsLinkedin} />
+            <LinkIcon href="" icon={FaGithub} />
+            <LinkIcon href="" icon={BsGitlab} />
+            <LinkIcon href="" icon={SiGmail} />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="space-y-4">
+          <SectionLink href="" title="About" />
+          <SectionLink href="" title="Experience" />
+          <SectionLink href="" title="Projects" />
+        </div>
+
+        <div className="flex gap-2 items-center">
+          <BtnGroup />
+          <BtnIcon icon={TbBrightnessDownFilled} />
+        </div>
+      </div>
+      <div className="py-24">
+        <p className="text-slate-500">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          commodo venenatis feugiat. Donec vitae massa magna. Vivamus egestas
+          odio at tempor pretium. Maecenas vitae purus sit amet ex maximus
+          tincidunt nec sit amet purus. Donec pulvinar enim in maximus cursus.
+          Aenean dapibus elit eros, quis elementum sem tristique et. Interdum et
+          malesuada fames ac ante ipsum primis in faucibus. Vivamus sit amet
+          velit justo. Morbi urna sapien, elementum non turpis vitae,
+          sollicitudin pulvinar tellus. Vivamus vel elit at eros placerat
+          dictum. Aenean in odio velit. Fusce id arcu fermentum, elementum nulla
+          id, finibus purus. Nullam viverra dapibus tincidunt. Aenean ultrices
+          leo nulla, sed placerat nulla luctus eget. In ex nulla, iaculis nec
+          felis vel, dictum consequat augue. Curabitur non tortor nec nibh
+          egestas fringilla. Cras porttitor nisi id augue lobortis rutrum.
+          Integer vel diam sed orci consequat egestas vitae ac nunc. Nunc
+          interdum, eros et tincidunt feugiat, eros augue eleifend nisi, nec
+          malesuada nisi ligula vel ex. Morbi sollicitudin justo quis turpis
+          lacinia interdum. Praesent cursus justo augue, id imperdiet ante
+          hendrerit et. Nunc tincidunt augue vel erat cursus convallis. Cras
+          scelerisque eleifend nisi, vitae mattis sem varius in. Maecenas non
+          lectus congue, aliquet urna non, maximus odio. Suspendisse pulvinar et
+          justo nec tristique. Duis dapibus leo sed malesuada ultrices. Fusce
+          sit amet sapien eget sapien fringilla interdum. In sollicitudin
+          pretium vehicula. Vivamus finibus posuere dolor in vulputate. Vivamus
+          id magna in sem convallis accumsan et non purus. Nam porttitor
+          porttitor est, nec gravida ligula dapibus sit amet. Quisque maximus
+          purus at rutrum convallis. Aliquam faucibus, orci at ultrices
+          venenatis, sem magna bibendum nulla, luctus laoreet lectus turpis
+          pulvinar quam. Duis blandit, lacus a aliquam vehicula, diam lorem
+          aliquet ipsum, eu mattis ante velit ut risus. Pellentesque dignissim
+          sodales sem tempor tristique. In luctus ligula a nisl tristique,
+          convallis imperdiet massa vulputate. Phasellus porttitor, mauris quis
+          consectetur aliquam, elit lorem condimentum arcu, ac tincidunt lacus
+          augue eu nulla. Nam volutpat leo ut est volutpat, ac consequat turpis
+          pretium. Praesent pulvinar mollis erat eget mollis. Nullam ut nisl non
+          nunc imperdiet consequat. Pellentesque fringilla iaculis egestas.
+          Proin et dignissim velit. Cras facilisis neque ac ligula euismod, at
+          lobortis ipsum tincidunt. Donec nec ultrices nisl. Quisque feugiat
+          elit urna, a eleifend arcu varius sit amet. Donec nibh sem, tristique
+          ac ex non, interdum semper metus. Suspendisse quis feugiat elit. Nunc
+          imperdiet, enim sed vehicula pellentesque, mi diam aliquet velit, sit
+          amet luctus est lorem sed lorem. Aenean cursus lorem ut fermentum
+          commodo. Ut bibendum congue augue. Etiam scelerisque dapibus mi, at
+          mattis quam laoreet sit amet. Sed rutrum massa vel ornare congue.
+          Integer consectetur est quis quam hendrerit, vel iaculis mi
+          consectetur. Integer at faucibus ex, rutrum viverra odio. Etiam eu
+          lacus interdum, vehicula arcu vitae, efficitur mauris. Sed mollis
+          tempus ligula rutrum iaculis. Nulla posuere placerat rutrum.
+        </p>
+        <p className="text-slate-500">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          commodo venenatis feugiat. Donec vitae massa magna. Vivamus egestas
+          odio at tempor pretium. Maecenas vitae purus sit amet ex maximus
+          tincidunt nec sit amet purus. Donec pulvinar enim in maximus cursus.
+          Aenean dapibus elit eros, quis elementum sem tristique et. Interdum et
+          malesuada fames ac ante ipsum primis in faucibus. Vivamus sit amet
+          velit justo. Morbi urna sapien, elementum non turpis vitae,
+          sollicitudin pulvinar tellus. Vivamus vel elit at eros placerat
+          dictum. Aenean in odio velit. Fusce id arcu fermentum, elementum nulla
+          id, finibus purus. Nullam viverra dapibus tincidunt. Aenean ultrices
+          leo nulla, sed placerat nulla luctus eget. In ex nulla, iaculis nec
+          felis vel, dictum consequat augue. Curabitur non tortor nec nibh
+          egestas fringilla. Cras porttitor nisi id augue lobortis rutrum.
+          Integer vel diam sed orci consequat egestas vitae ac nunc. Nunc
+          interdum, eros et tincidunt feugiat, eros augue eleifend nisi, nec
+          malesuada nisi ligula vel ex. Morbi sollicitudin justo quis turpis
+          lacinia interdum. Praesent cursus justo augue, id imperdiet ante
+          hendrerit et. Nunc tincidunt augue vel erat cursus convallis. Cras
+          scelerisque eleifend nisi, vitae mattis sem varius in. Maecenas non
+          lectus congue, aliquet urna non, maximus odio. Suspendisse pulvinar et
+          justo nec tristique. Duis dapibus leo sed malesuada ultrices. Fusce
+          sit amet sapien eget sapien fringilla interdum. In sollicitudin
+          pretium vehicula. Vivamus finibus posuere dolor in vulputate. Vivamus
+          id magna in sem convallis accumsan et non purus. Nam porttitor
+          porttitor est, nec gravida ligula dapibus sit amet. Quisque maximus
+          purus at rutrum convallis. Aliquam faucibus, orci at ultrices
+          venenatis, sem magna bibendum nulla, luctus laoreet lectus turpis
+          pulvinar quam. Duis blandit, lacus a aliquam vehicula, diam lorem
+          aliquet ipsum, eu mattis ante velit ut risus. Pellentesque dignissim
+          sodales sem tempor tristique. In luctus ligula a nisl tristique,
+          convallis imperdiet massa vulputate. Phasellus porttitor, mauris quis
+          consectetur aliquam, elit lorem condimentum arcu, ac tincidunt lacus
+          augue eu nulla. Nam volutpat leo ut est volutpat, ac consequat turpis
+          pretium. Praesent pulvinar mollis erat eget mollis. Nullam ut nisl non
+          nunc imperdiet consequat. Pellentesque fringilla iaculis egestas.
+          Proin et dignissim velit. Cras facilisis neque ac ligula euismod, at
+          lobortis ipsum tincidunt. Donec nec ultrices nisl. Quisque feugiat
+          elit urna, a eleifend arcu varius sit amet. Donec nibh sem, tristique
+          ac ex non, interdum semper metus. Suspendisse quis feugiat elit. Nunc
+          imperdiet, enim sed vehicula pellentesque, mi diam aliquet velit, sit
+          amet luctus est lorem sed lorem. Aenean cursus lorem ut fermentum
+          commodo. Ut bibendum congue augue. Etiam scelerisque dapibus mi, at
+          mattis quam laoreet sit amet. Sed rutrum massa vel ornare congue.
+          Integer consectetur est quis quam hendrerit, vel iaculis mi
+          consectetur. Integer at faucibus ex, rutrum viverra odio. Etiam eu
+          lacus interdum, vehicula arcu vitae, efficitur mauris. Sed mollis
+          tempus ligula rutrum iaculis. Nulla posuere placerat rutrum.
+        </p>
+      </div>
+    </section>
   );
 }
