@@ -1,12 +1,16 @@
 import careerData from "@/data/career-data.json";
-import { BsFacebook, BsGitlab, BsLinkedin } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-import { TbBrightnessDownFilled } from "react-icons/tb";
-import BtnGroup from "./components/group-btn";
+import {
+  FiFacebook,
+  FiGithub,
+  FiGitlab,
+  FiInstagram,
+  FiLinkedin,
+} from "react-icons/fi";
+import { TbBrandGmail, TbBrightnessDownFilled } from "react-icons/tb";
 import BtnIcon from "./components/btn-icon";
 import Career from "./components/career";
 import { ICareer } from "./components/career/career-item";
+import BtnGroup from "./components/group-btn";
 import LinkIcon from "./components/link-icon";
 import SectionLink from "./components/link-section";
 
@@ -27,13 +31,20 @@ export default function Home() {
 
           <div className="flex flex-row gap-4 mt-4">
             <LinkIcon
-              href="https://www.facebook.com/nghiacangao"
-              icon={BsFacebook}
+              href="mailto:nghiadt22.work@gmail.com"
+              icon={TbBrandGmail}
             />
-            <LinkIcon href="" icon={BsLinkedin} />
-            <LinkIcon href="https://github.com/nacana22" icon={FaGithub} />
-            <LinkIcon href="https://gitlab.com/codengoo" icon={BsGitlab} />
-            <LinkIcon href="mailto:nghiadt22.work@gmail.com" icon={SiGmail} />
+            <LinkIcon
+              href="https://www.facebook.com/nghiacangao"
+              icon={FiFacebook}
+            />
+            <LinkIcon href="" icon={FiLinkedin} />
+            <LinkIcon
+              href="https://www.facebook.com/nghiacangao"
+              icon={FiInstagram}
+            />
+            <LinkIcon href="https://github.com/nacana22" icon={FiGithub} />
+            <LinkIcon href="https://gitlab.com/codengoo" icon={FiGitlab} />
           </div>
         </div>
 

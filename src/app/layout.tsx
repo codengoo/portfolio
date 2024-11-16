@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Fira_Mono, Poppins } from "next/font/google";
+import SectionLink from "./components/link-section";
 import "./globals.css";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
+
+const fira_mono = Fira_Mono({
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
@@ -43,7 +49,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-slate-900 antialiased`}>
+      <body
+        className={`${poppins.className} bg-slate-900 antialiased relative`}
+      >
+        <div className="fixed bottom-10 right-10 z-10">
+          <SectionLink
+            title="nghiadt22.work@gmail.com"
+            href="mailto:nghiadt22.work@gmail.com"
+            direction="vertical"
+            className={
+              "text-sm lowercase tracking-widest font-normal " +
+              fira_mono.className
+            }
+          />
+        </div>
         {children}
       </body>
     </html>
