@@ -1,9 +1,12 @@
+import careerData from "@/data/career-data.json";
 import { BsFacebook, BsGitlab, BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { TbBrightnessDownFilled } from "react-icons/tb";
-import BtnGroup from "./components";
+import BtnGroup from "./components/group-btn";
 import BtnIcon from "./components/btn-icon";
+import Career from "./components/career";
+import { ICareer } from "./components/career/career-item";
 import LinkIcon from "./components/link-icon";
 import SectionLink from "./components/link-section";
 
@@ -23,11 +26,14 @@ export default function Home() {
           </p>
 
           <div className="flex flex-row gap-4 mt-4">
-            <LinkIcon href="" icon={BsFacebook} />
+            <LinkIcon
+              href="https://www.facebook.com/nghiacangao"
+              icon={BsFacebook}
+            />
             <LinkIcon href="" icon={BsLinkedin} />
-            <LinkIcon href="" icon={FaGithub} />
-            <LinkIcon href="" icon={BsGitlab} />
-            <LinkIcon href="" icon={SiGmail} />
+            <LinkIcon href="https://github.com/nacana22" icon={FaGithub} />
+            <LinkIcon href="https://gitlab.com/codengoo" icon={BsGitlab} />
+            <LinkIcon href="mailto:nghiadt22.work@gmail.com" icon={SiGmail} />
           </div>
         </div>
 
@@ -43,6 +49,8 @@ export default function Home() {
         </div>
       </div>
       <div className="py-24">
+        <Career data={careerData.data as ICareer[]} />
+
         <p className="text-slate-500">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           commodo venenatis feugiat. Donec vitae massa magna. Vivamus egestas
