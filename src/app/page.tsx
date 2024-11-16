@@ -3,7 +3,7 @@ import { BsFacebook, BsGitlab, BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { TbBrightnessDownFilled } from "react-icons/tb";
-import BtnGroup from "./components";
+import BtnGroup from "./components/group-btn";
 import BtnIcon from "./components/btn-icon";
 import Career from "./components/career";
 import { ICareer } from "./components/career/career-item";
