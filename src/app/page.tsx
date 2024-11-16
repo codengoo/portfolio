@@ -5,7 +5,8 @@ import { SiGmail } from "react-icons/si";
 import { TbBrightnessDownFilled } from "react-icons/tb";
 import BtnGroup from "./components";
 import BtnIcon from "./components/btn-icon";
-import Career, { ICareer } from "./components/career";
+import Career from "./components/career";
+import { ICareer } from "./components/career/career-item";
 import LinkIcon from "./components/link-icon";
 import SectionLink from "./components/link-section";
 
@@ -48,11 +49,7 @@ export default function Home() {
         </div>
       </div>
       <div className="py-24">
-        <div>
-          {(careerData.data as ICareer[]).map((value, index) => (
-            <Career key={"career_" + index} data={value} />
-          ))}
-        </div>
+        <Career data={careerData.data as ICareer[]} />
 
         <p className="text-slate-500">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
