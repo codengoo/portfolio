@@ -7,13 +7,10 @@
             "items": {
                 "type": "object",
                 "properties": {
-                    "time": {
+                    "name": {
                         "type": "string"
                     },
-                    "job": {
-                        "type": "string"
-                    },
-                    "company": {
+                    "image": {
                         "type": "string"
                     },
                     "href": {
@@ -31,9 +28,8 @@
                     }
                 },
                 "required": [
-                    "time",
-                    "job",
-                    "company",
+                    "name",
+                    "image",
                     "href",
                     "description",
                     "tags"

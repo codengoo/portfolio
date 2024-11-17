@@ -1,4 +1,5 @@
 import careerData from "@/data/career-data.json";
+import projectData from "@/data/project-data.json";
 import {
   FiFacebook,
   FiGithub,
@@ -6,13 +7,14 @@ import {
   FiInstagram,
   FiLinkedin,
 } from "react-icons/fi";
+import { SiZalo } from "react-icons/si";
 import { TbBrandGmail, TbBrightnessDownFilled } from "react-icons/tb";
-import BtnIcon from "./components/btn-icon";
-import Career from "./components/career";
-import { ICareer } from "./components/career/career-item";
+import BtnIcon from "./components/btn_icon";
+import Career, { ICareer } from "./components/career";
 import BtnGroup from "./components/group-btn";
-import LinkIcon from "./components/link-icon";
-import SectionLink from "./components/link-section";
+import LinkIcon from "./components/link_icon";
+import SectionLink from "./components/link_section";
+import Projects, { IProject } from "./components/projects";
 
 export default function Home() {
   return (
@@ -45,6 +47,7 @@ export default function Home() {
             />
             <LinkIcon href="https://github.com/nacana22" icon={FiGithub} />
             <LinkIcon href="https://gitlab.com/codengoo" icon={FiGitlab} />
+            <LinkIcon href="https://gitlab.com/codengoo" icon={SiZalo} />
           </div>
         </div>
 
@@ -60,7 +63,8 @@ export default function Home() {
         </div>
       </div>
       <div className="py-24">
-        <Career data={careerData.data as ICareer[]} />
+        <Career data={(careerData satisfies ICareer).data} />
+        <Projects data={(projectData satisfies IProject).data} />
 
         <p className="text-slate-500">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
