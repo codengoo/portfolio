@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Mono, Poppins } from "next/font/google";
-import SectionLink from "./components/link-section";
+import SectionLink from "./components/link_section";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -17,7 +17,16 @@ export const metadata: Metadata = {
   title: "Tuan Nghia - An enthusiasm coder",
   description:
     "Tuan Nghia is Web Developer passionate about creating efficient and user-friendly websites.",
-  keywords: ["web developer", "coder", "portfolio", "tuan nghia", "enthusiasm"],
+  keywords: [
+    "nghiacangao",
+    "ncn",
+    "nacana22",
+    "tuan nghia",
+    "do tuan nghia",
+    "web developer",
+    "coder",
+    "portfolio",
+  ],
   openGraph: {
     title: "Tuan Nghia - An enthusiasm coder",
     description:
@@ -58,7 +67,7 @@ export default function RootLayout({
             href="mailto:nghiadt22.work@gmail.com"
             direction="vertical"
             className={
-              "text-sm lowercase tracking-widest font-normal " +
+              "text-sm lowercase tracking-widest font-normal leading-10 " +
               fira_mono.className
             }
           />

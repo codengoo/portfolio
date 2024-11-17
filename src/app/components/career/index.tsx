@@ -1,28 +1,18 @@
-import CareerItem, { ICareer } from "./career-item";
-import ExternalLinkIcon from "./external-link-icon";
+import InfoList from "../info_list";
+import CareerItem, { ICareerItemProps } from "./career-item";
 
-interface ICareerProps {
-  data: ICareer[];
+export interface ICareer {
+  data: ICareerItemProps[];
 }
 
-export default function Career({ data }: ICareerProps) {
+export default function Career({ data }: ICareer) {
   return (
-    <div>
-      <ol className="group/list">
-        {data.map((value, index) => (
-          <CareerItem key={"career_" + index} data={value} />
-        ))}
-      </ol>
-
-      <div className="mt-12">
-        <a
-          className="group text-slate-200 hover:text-teal-300 font-medium leading-snug"
-          href=""
-        >
-          <span>View full my Resume</span>
-          <ExternalLinkIcon />
-        </a>
-      </div>
-    </div>
+    <InfoList
+      data={data}
+      renderItem={(value, index) => (
+        <CareerItem {...value} key={"item_" + index} />
+      )}
+      more={{ href: "", title: "View full my Resume" }}
+    />
   );
 }
