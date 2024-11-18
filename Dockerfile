@@ -2,7 +2,7 @@ FROM node:alpine AS builder
 
 WORKDIR /src
 COPY . .
-RUN npm install
+RUN npm install --force
 RUN npm run build
 
 FROM nginx:stable-alpine
