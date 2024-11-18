@@ -1,0 +1,25 @@
+{
+    "$schema": "./project-schema.json",
+    "data": [
+        {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo venenatis feugiat. Donec vitae massa magna. Vivamus egestas odio at tempor pretium. Maecenas vitae purus sit amet ex maximus tincidunt nec sit amet purus. Donec pulvinar enim in maximus cursus. Aenean dapibus elit eros, quis elementum sem tristique et. Interdum et",
+            "href": "https://motion.html",
+            "image": "https://fedudesign.vn/wp-content/uploads/2020/07/Web-1920-%E2%80%93-2.jpg",
+            "name": "Day la mot du an",
+            "tags": [
+                "reactjs",
+                "nextjs"
+            ]
+        },
+        {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo venenatis feugiat. Donec vitae massa magna. Vivamus egestas odio at tempor pretium. Maecenas vitae purus sit amet ex maximus tincidunt nec sit amet purus. Donec pulvinar enim in maximus cursus. Aenean dapibus elit eros, quis elementum sem tristique et. Interdum et",
+            "href": "https://motion.html",
+            "image": "https://fedudesign.vn/wp-content/uploads/2020/07/Web-1920-%E2%80%93-2.jpg",
+            "name": "Day la mot du an",
+            "tags": [
+                "reactjs",
+                "nextjs"
+            ]
+        }
+    ]
+}

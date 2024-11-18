@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "time": {
+                        "type": "string"
+                    },
+                    "job": {
+                        "type": "string"
+                    },
+                    "company": {
+                        "type": "string"
+                    },
+                    "href": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "time",
+                    "job",
+                    "company",
+                    "href",
+                    "description",
+                    "tags"
+                ]
+            }
+        }
+    }
+}

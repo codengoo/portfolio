@@ -1,4 +1,4 @@
-import Btn from "./group-btn/btn";
+import Btn from "./btn";
 
 export default function BtnGroup() {
   return (
