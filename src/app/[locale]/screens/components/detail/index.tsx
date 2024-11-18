@@ -1,8 +1,8 @@
 import careerData from "@/data/career-data.json";
 import projectData from "@/data/project-data.json";
 
-import Career, { ICareer } from "@/app/components/career";
-import Projects, { IProject } from "@/app/components/projects";
+import Career, { ICareer } from "@/app/[locale]/components/career";
+import Projects, { IProject } from "@/app/[locale]/components/projects";
 
 export default function Detail() {
   return (
