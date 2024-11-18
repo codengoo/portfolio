@@ -1,7 +1,8 @@
-import BtnIcon from "@/app/components/btn_icon";
-import BtnGroup from "@/app/components/group-btn";
-import LinkIcon from "@/app/components/link_icon";
-import SectionLink from "@/app/components/link_section";
+import BtnIcon from "@/app/[locale]/components/btn_icon";
+import BtnGroup from "@/app/[locale]/components/group-btn";
+import LinkIcon from "@/app/[locale]/components/link_icon";
+import SectionLink from "@/app/[locale]/components/link_section";
+import { useTranslations } from "next-intl";
 import {
   FiFacebook,
   FiGithub,
@@ -13,6 +14,8 @@ import { SiZalo } from "react-icons/si";
 import { TbBrandGmail, TbBrightnessDownFilled } from "react-icons/tb";
 
 export default function Profile() {
+  const t = useTranslations("Home");
+
   return (
     <div className="py-24 flex flex-col justify-between sticky top-0 left-0 h-screen max-h-screen z-50">
       <div>
@@ -22,9 +25,7 @@ export default function Profile() {
         <h2 className="text-2xl font-semibold tracking-tight text-slate-200">
           Coder
         </h2>
-        <p className="mt-4 text-slate-500">
-          I can build everything you can imagine
-        </p>
+        <p className="mt-4 text-slate-500">{t("slogan")}</p>
 
         <div className="flex flex-row gap-4 mt-4">
           <LinkIcon
